@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DOM 21 Elements Interactive</title>
+<style>
+  body { font-family: sans-serif; background: #111; color: #fff; padding: 20px; }
+  * { margin: 8px 0; transition: 0.3s; }
+  .highlight { background: #1f2937; color: #0fdfc4; padding: 4px; border-radius: 4px; }
+  table, th, td { border: 1px solid #fff; border-collapse: collapse; padding: 4px; }
+</style>
+</head>
+<body>
+
+<header>Header Element</header>
+<h1>Main Title</h1>
+<h2>Sub Title</h2>
+<p>Paragraph text with a <span>span inside</span></p>
+<ul><li>Unordered 1</li><li>Unordered 2</li></ul>
+<ol><li>Ordered 1</li><li>Ordered 2</li></ol>
+
+<form>
+  <label for="name">Name:</label>
+  <input id="name" type="text" placeholder="Your Name">
+  <button type="button">Submit</button>
+  <select><option>Option 1</option><option>Option 2</option></select>
+  <textarea placeholder="Write here"></textarea>
+</form>
+
+<img src="https://via.placeholder.com/60x40" alt="img">
+<a href="#">Example Link</a>
+
+<table>
+  <tr><th>Item</th><th>Qty</th></tr>
+  <tr><td>Apple</td><td>5</td></tr>
+</table>
+
+<hr>
+<div>Simple Div</div>
+<footer>Footer Element</footer>
+
+<script>
+  // Select all elements except <script> itself
+  const elements = document.body.querySelectorAll("*:not(script)");
+
+  // Add hover effect to highlight
+  elements.forEach(el => {
+    el.addEventListener("mouseenter", () => el.classList.add("highlight"));
+    el.addEventListener("mouseleave", () => el.classList.remove("highlight"));
+  });
+
+  // Button demo
+  document.querySelector("button").onclick = () => alert("Button clicked!");
+</script>
+
+</body>
+</html>
+
+
+<!-- ✅ Summary / Cheat Story
+
+Spotters → Find villagers
+
+Builders → Create, add, remove, duplicate villagers
+
+Storytellers → Change or read text
+
+ID Cards → Attributes & classes
+
+Reactors → Events / actions
+
+Painters → Styles
+
+Scouts → Navigate the village
+
+Helpers → Body, head, title, cookie
+
+Catchy story: “In my DOM Village, VIP Finder finds villagers, Brick Maker builds houses, 
+Speech Bubble talks, Wardrobe dresses them, Alarm Bell rings on action, Painter colors them, Scouts patrol, 
+and Helpers keep the village running.” -->
