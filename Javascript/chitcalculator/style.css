@@ -60,6 +60,7 @@ h1 {
     violet
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: rainbowText 5s linear infinite;
   background-size: 400%;
@@ -170,6 +171,7 @@ input[type='number'] {
   );
   background-size: 400%;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: rainbowText 5s linear infinite;
 }
@@ -190,6 +192,7 @@ input[type='number'] {
   );
   background-size: 400%;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: rainbowText 5s linear infinite;
 }
