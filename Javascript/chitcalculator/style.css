@@ -1,0 +1,215 @@
+/* Reset + font setup */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Rainbow animated background */
+  background: linear-gradient(
+    270deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  background-size: 1400% 1400%;
+
+  animation: rainbowMove 20s linear infinite;
+}
+
+/* Keyframes for moving rainbow */
+@keyframes rainbowMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Center wrapper box */
+#wrapper {
+  background: rgba(0, 0, 0, 0.7); /* semi-transparent to show rainbow */
+  padding: 20px;
+  border-radius: 12px;
+  width: 360px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowText 5s linear infinite;
+  background-size: 400%;
+}
+
+/* Rainbow text animation */
+@keyframes rainbowText {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+/* Labels */
+label {
+  display: block;
+  text-align: left;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Input fields */
+input[type='number'] {
+  width: 80%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 2px solid #fff;
+  margin-top: 6px;
+  text-align: center;
+  font-size: 16px;
+  background: #fff;
+  color: #000;
+}
+
+/* Button */
+#calculateBtn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 14px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+#calculateBtn:hover {
+  transform: scale(1.05);
+}
+
+/* Result area */
+.result {
+  margin-top: 16px;
+  font-size: 16px;
+  color: #fff;
+}
+
+/* Error message in red */
+.error {
+  color: #ff6666;
+  font-weight: bold;
+}
+
+/* Popup background */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Rainbow text for amounts */
+.rainbow-text {
+  font-size: 3em; /* big for main amount */
+  font-weight: bold;
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowText 5s linear infinite;
+}
+
+/* Smaller rainbow for remaining amount */
+.rainbow-small {
+  font-size: 1.5em;
+  font-weight: bold;
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowText 5s linear infinite;
+}
+
+/* Popup box */
+.popup-content {
+  background: #fff;
+  color: #333;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+  color: red;
+}

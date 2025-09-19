@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chit Split Calculator</title>
+
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Wrapper to center everything -->
+    <div id="wrapper">
+      <h1>💰 Chit Calculator</h1>
+      <p>Enter the details of Chit , Click Calculate.</p>
+
+      <!-- Calculator Form -->
+      <form id="chitForm" autocomplete="off">
+        <!-- Number of People Input -->
+        <label for="numPeople">Number of People:</label>
+        <input
+          type="number"
+          id="numPeople"
+          placeholder="Enter number of people"
+          min="10"
+          required
+        />
+        <!-- Total Amount Input -->
+        <label for="devudiPata">Devudi Pata (₹):</label>
+        <input
+          type="number"
+          id="devudiPata"
+          placeholder="Enter total amount"
+          min="1000"
+          required
+        />
+        <!-- Number of Loss Amount Input -->
+        <label for="lossAmount">Loss Amount (₹):</label>
+        <input
+          type="number"
+          id="lossAmount"
+          placeholder="Enter loss amount"
+          min="1000"
+          required
+        />
+        <!-- Number of Total Amount in Input -->
+        <label for="totalAmount">Total Amount (₹):</label>
+        <input
+          type="number"
+          id="totalAmount"
+          placeholder="Enter total amount"
+          min="1000"
+          required
+        />
+
+        <!-- Submit Button -->
+        <input type="submit" id="calculateBtn" value="Calculate" />
+      </form>
+
+      <!-- Result Section -->
+      <div class="result" id="resultBox" aria-live="polite">
+        <p id="output"></p>
+      </div>
+    </div>
+
+    <!-- Popup Modal -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span id="closePopup" class="close">&times;</span>
+        <p id="popupMessage"></p>
+      </div>
+    </div>
+
+    <!-- External JS file -->
+    <script src="chitCalculator.js"></script>
+  </body>
+</html>
