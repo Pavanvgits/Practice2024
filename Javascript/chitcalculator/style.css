@@ -73,6 +73,7 @@ h1 {
   color: #ffffff; /* white text */
   background: none; /* remove gradient */
   -webkit-background-clip: initial;
+  background-clip: initial;
   -webkit-text-fill-color: initial;
   animation: none; /* remove rainbow animation */
 }
