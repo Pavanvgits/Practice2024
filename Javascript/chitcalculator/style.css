@@ -93,6 +93,10 @@ p {
    color: #fff; 
 }
 
+p1 {
+  margin-bottom: 16px;
+}
+
 /* Labels */
 label {
   display: block;
